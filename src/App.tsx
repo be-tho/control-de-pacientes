@@ -9,8 +9,8 @@ function App() {
     
     </div>
     <div className="mt-12 md:flex">
-      <PatientList />
       <PatientForm />
+      <PatientList />
     </div>
     </>
   )
