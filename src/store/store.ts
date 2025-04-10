@@ -1,5 +1,5 @@
 import { create } from "zustand"
-import { createJSONStorage, devtools, persist } from "zustand/middleware"
+import { devtools, persist } from "zustand/middleware"
 import { DraftPatient, Patient } from "../types"
 import { v4 as uuid4 } from "uuid"
 
