@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form"
 import Error from "./Error"
+import { toast } from "react-toastify"
 import { DraftPatient } from "../types"
 import { usePatientStore } from "../store/store"
 import { useEffect } from "react"
@@ -25,13 +26,15 @@ export default function PatientForm() {
         }
     }, [activeId])
 
+    //Registrar un paciente
     const registerPatient = (data : DraftPatient) => {
         if(activeId) {
             updatePatient(data)
+            toast.success('Paciente actualizado correctamente')
         }else{
             addPatient(data)
+            toast.success('Paciente registrado correctamente')
         }
-
         reset()
     }
   
